@@ -13,6 +13,11 @@
 <manifestclasspath property="dist.manifest.classpath" jarfile="defacetool.jar">
     <classpath refid="dist.classpath" />
 </manifestclasspath>
+
+<target name="compile"> 
+    <mkdir dir="${classes.dir}"/> 
+    <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="dist.classpath"/> 
+</target> 
  
 <target name="jar">
 <jar destfile="defacetool.jar" basedir="${classes.dir}">
